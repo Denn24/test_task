@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Adding stylesheets-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/bootstrap-theme.css' %}">
+    <!--Adding a script for the chart-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <title>Cipher of Caesar</title>
+</head>
+<body>
+
+<!--setka head-->
+<div id="header" class="row">
+    <div class="col-md-12">
+        <h1 id="main-name">Cipher of Caesar</h1>
+        <hr id="main-line"/>
+    </div>
+</div>
+
+<!--setka main-->
+<div class="row">
+    <div class="col-md-2"></div><!--left identing-->
+
+    <div class="col-md-3">
+  			<div class="input-message">
+    			<label for="exampleInput">Enter the sentence</label>
+    			<input id="text-input" type="text" class="form-control" placeholder="message">
+  			</div>
+    </div>
+
+
+
+    <!--Front-->
+    <div class="col-md-2">
+        <!--buttons-->
+        <button id="button-encode" onclick="onAjax('encode')" type="button" class="btn btn-primary btn-lg active">Encode</button>
+        <button id="button-decode" onclick="onAjax('decode')" type="button" class="btn btn-primary btn-lg active">Decode</button>
+        <!--/buttons-->
+
+        <!--Enter the key-->
+        <div class="input-message">
+            <label id="message-key">Enter the key</label>
+            <input id="text-key" type="text" class="form-control" placeholder="key">
+        </div>
+        <!--/Enter the key-->
+    </div>
+    <!--/Front-->
+
+    <!--output-->
+    <div class="col-md-3">
+        <div class="output-message">
+            <label for="exampleInput">Decoded text</label>
+            <input id="text-output" type="text" class="form-control" placeholder="text">
+        </div>
+    </div>
+
+    <div class="col-md-2"></div><!--right identing-->
+
+
+</div>
+
+
+    <!--setka footer-->
+
+<div id="footer" class="row">
+{#    <div class="col-md-4"></div><!--left identing-->#}
+    <div class="col-md-12 col-xs-6">
+        <div id="diagram"></div>
+    </div>
+{#    <div class="col-md-4"></div><!--right identing-->#}
+
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'ajax.js' %}"></script>
+
+</body>
+</html>

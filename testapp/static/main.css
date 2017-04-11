@@ -1,0 +1,31 @@
+/* Stylesheet */
+#header{
+	background-color: #DCDCDC;
+	height: 350px;
+}
+.row{
+	background-color: #DCDCDC;
+	height: 150px;
+}
+#footer{
+	height: 400px;
+	background-color: dimgray;
+}
+#main-line {
+	border: none;
+    background-color: #080808;
+    color: #080808;
+    height: 4px;
+}
+#main-name{
+	margin: 25px;
+}
+#message-key{
+	margin-top: 25px;
+	margin-left: 50px;
+}
+#diagram{
+	width: 500px;
+	height: 400px;
+	margin-left: 31%;
+}
